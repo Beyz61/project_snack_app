@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:project_snack_app/widget/screens/details_screen.dart';
 
 class BalusCupContainer extends StatelessWidget {
   const BalusCupContainer({
@@ -10,25 +11,11 @@ class BalusCupContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
     onTap: () {
-      showDialog(
-    context: context,
-    builder: (BuildContext context) => AlertDialog(
-    title: const Text("Choose Ingredient"),
-    content: const Text("Cup \nCup"),
-    actions: <Widget>[
-     TextButton(
-    onPressed: () {
-     Navigator.of(context).pop(
-                        );
-                        },
-                        child: const Text(
-     "OK"
-    ),
-                        ),
-                      ]
-                     )
-                   );
-                 },
+         showModalBottomSheet(context: context, builder:(context){
+          return DetailsScreen();
+          }
+         );
+          },
     child: ClipRRect(
     child: BackdropFilter(
      filter: ImageFilter.blur(sigmaX: 1000, sigmaY: 1000),           
@@ -39,11 +26,11 @@ class BalusCupContainer extends StatelessWidget {
     borderRadius: BorderRadius.circular(24),
     border: Border.all(color: Colors.white, width: 0.2),
     gradient: const LinearGradient(colors: [
-    Color.fromARGB(57, 82, 82, 82),
-    Color.fromARGB(132, 134, 90, 255),
-    Color.fromARGB(132, 134, 90, 255),
-    Color.fromARGB(132, 134, 90, 255),
-    Color.fromARGB(155, 105, 28, 177)
+                      Color.fromARGB(213, 82, 82, 82),
+                      Color.fromARGB(132, 138, 127, 168),
+                      Color.fromARGB(132, 134, 90, 255),
+                      Color.fromARGB(132, 134, 90, 255),
+                      Color.fromARGB(195, 127, 47, 202)
     ],stops: [
     0.1,
     0.35,

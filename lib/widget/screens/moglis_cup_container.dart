@@ -13,14 +13,14 @@ class MoglisCupContainer extends StatelessWidget {
             showDialog(
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
-                        title: const Text("Choose your Sound"),
-                        content: const Text("Sound \nSound \nSound \nSound"),
+                        title: const Text("Choose Ingredient"),
+                        content: const Text("CUP \nCUP \nCUP\nCUP"),
                         actions: <Widget>[
                           TextButton(
                               onPressed: () {
      Navigator.of(context).pop();
                               },
-                              child: const Text("Save"))
+                              child: const Text("OK"))
                         ]));
           },
           child: ClipRRect(

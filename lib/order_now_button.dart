@@ -31,20 +31,20 @@ class OrderNowButton extends StatelessWidget {
         ),
         ),
       
-        child: const Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: 10,        // höhe
-            horizontal: 55       //button länge
-          ),
-          
-          child: Text("Order Now",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold)),
-        ),
+           child: const Padding(
+      padding: EdgeInsets.symmetric(
+        vertical: 10,        // höhe
+        horizontal: 55       //button länge
       ),
-    );
+      
+      child: Text("Order Now",
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold)),
+    ),
+  ),
+);
   }
 }
 

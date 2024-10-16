@@ -48,7 +48,7 @@ class BalusCupContainer extends StatelessWidget {
           children: [
            Transform.scale(
             scale: 1.0,
-            child: Image.asset("assets/grafics/cat cupcakes_3D.png"),),
+            child: Image.asset("assets/grafics/Ice.cream.png"),),
             const Text("Balu`s Cup",
              style: TextStyle(
                fontWeight: FontWeight.bold,

@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               top: 620, 
               left: 20,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(20), // Runder Rahmen
+                borderRadius: BorderRadius.circular(40), // Runder Rahmen
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8), // Verschwommenheit
                   child: Container(

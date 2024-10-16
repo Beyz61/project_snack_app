@@ -135,14 +135,14 @@ class DetailsScreen extends StatelessWidget {
                               Icon(Icons.star, color: Colors.white, size: 20),
                               SizedBox(width: 5),
                               Icon(Icons.star, color: Colors.white, size: 20),
-                              SizedBox(width: 5),
-                              Icon(Icons.grade,  size: 20),
+                              SizedBox(width: 5,),
+                              Icon(Icons.star_border_outlined, color: Colors.grey, size: 20),
                               //  Expanded(
                               //   flex: 2,
                               //   child: SizedBox(width: 10),
                               //   ),
                                Padding(
-                                 padding: EdgeInsets.only(left:16),
+                                 padding: EdgeInsets.only(left:8),
                                  child: Text("4.0",style: TextStyle(
                                           color: Colors.white70,
                                           fontSize: 12,
@@ -173,7 +173,7 @@ class DetailsScreen extends StatelessWidget {
               ],
               borderRadius: BorderRadius.circular(10),
               gradient: const LinearGradient(colors: [
-                Color.fromARGB(255, 243, 111, 219),
+                Color.fromARGB(255, 239, 55, 206),
                 Color.fromARGB(218, 209, 152, 130)
               ], 
                 begin: Alignment.centerLeft, 

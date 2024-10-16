@@ -10,9 +10,11 @@ class OrderNowButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ScreenToFav ()));
+            MaterialPageRoute(builder: (context) => const ScreenToFav ()
+        ),
+       );
       },
-      child: Container(
+     child: Container(
         decoration: BoxDecoration(
             boxShadow: const [
               BoxShadow(
@@ -36,7 +38,6 @@ class OrderNowButton extends StatelessWidget {
         vertical: 10,        // höhe
         horizontal: 55       //button länge
       ),
-      
       child: Text("Order Now",
           style: TextStyle(
               color: Colors.white,

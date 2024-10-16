@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:project_snack_app/widget/screens/details_screen.dart';
 
 class MoglisCupContainer extends StatelessWidget {
   const MoglisCupContainer({
@@ -10,18 +11,10 @@ class MoglisCupContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
           onTap: () {
-            showDialog(
-                context: context,
-                builder: (BuildContext context) => AlertDialog(
-                        title: const Text("Choose Ingredient"),
-                        content: const Text("CUP \nCUP \nCUP\nCUP"),
-                        actions: <Widget>[
-                          TextButton(
-                              onPressed: () {
-     Navigator.of(context).pop();
-                              },
-                              child: const Text("OK"))
-                        ]));
+         showModalBottomSheet(context: context, isScrollControlled: true, builder:(context){
+          return DetailsScreen();
+          }
+         );
           },
           child: ClipRRect(
             child: BackdropFilter(
@@ -33,11 +26,11 @@ class MoglisCupContainer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(24),
                     border: Border.all(color: Colors.white, width: 0.2),
                     gradient: const LinearGradient(colors: [
-                      Color.fromARGB(57, 82, 82, 82),
+                      Color.fromARGB(213, 82, 82, 82),
+                      Color.fromARGB(132, 138, 127, 168),
                       Color.fromARGB(132, 134, 90, 255),
                       Color.fromARGB(132, 134, 90, 255),
-                      Color.fromARGB(132, 134, 90, 255),
-                      Color.fromARGB(155, 105, 28, 177)
+                      Color.fromARGB(195, 127, 47, 202),
                     ], stops: [
                       0.1,
                       0.35,
@@ -54,12 +47,12 @@ class MoglisCupContainer extends StatelessWidget {
                           scale: 1.0,
                           child: Image.asset("assets/grafics/Ice.cream.png"),),
                       const Text("Mogli`s Cup",
-                          style: TextStyle(
+                              style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 12,
                               color: Colors.white)),
                       const Text("Strawberry ice cream",
-                          style: TextStyle(
+                              style: TextStyle(
                               color: Colors.white,
                               fontSize: 11,
                               fontWeight: FontWeight.w300)),
@@ -69,15 +62,16 @@ class MoglisCupContainer extends StatelessWidget {
                           Text(
                             "₳8.99",
                             style: TextStyle(
-     color: Colors.white,
-     fontSize: 12,
-     fontWeight: FontWeight.w400),
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400),
                           ),
                           Expanded(child: SizedBox()),
                           Icon(Icons.favorite_border_rounded,
                               color: Colors.white, size: 12),
                           Text("200",
-                              style: TextStyle(color: Colors.white, fontSize: 12))
+                              style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
                         ],
                       )
                     ],

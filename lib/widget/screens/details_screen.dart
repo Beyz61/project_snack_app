@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -15,16 +14,17 @@ class DetailsScreen extends StatelessWidget {
             ],
           ),
         ),
-      child: Stack(clipBehavior: 
-      Clip.none, 
-      fit: StackFit.expand, 
-      children: <Widget>[
+      child: Stack(
+        clipBehavior: 
+        Clip.none, 
+        fit: StackFit.expand, 
+        children: <Widget>[
         Positioned(
           top: -140,
           left: -70,
-          child: Transform.scale(
+           child: Transform.scale(
             scale: 0.8,
-            child: const Image(
+             child: const Image(
               image: AssetImage("assets/grafics/cat cupcakes_3D.png"),
             ),
           ),
@@ -32,14 +32,14 @@ class DetailsScreen extends StatelessWidget {
          Positioned( 
               top: 230, 
               left: 20,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(0), // Runder Rahmen
+               child: ClipRRect(
+               borderRadius: BorderRadius.circular(0), // Runder Rahmen
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8), // Verschwommenheit
-                  child: Container(
+                   child: Container(
                     height: 350, // Höhe Container
-                    width: 360,
-                    decoration: BoxDecoration(
+                     width: 360,
+                       decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 0.1), // Weiße Umrandung
                       borderRadius: BorderRadius.circular(16), // Runder Rahmen
                    //   color: Colors.white.withOpacity(0.1), // Hintergrund durchsichtig
@@ -95,7 +95,7 @@ class DetailsScreen extends StatelessWidget {
                                        ),
                                       ),
                                       Expanded(
-                                    flex: 11,
+                                    flex: 10,
                                   child: SizedBox()),
                                 Text ("Reviews",
                                 style: TextStyle( 
@@ -124,28 +124,34 @@ class DetailsScreen extends StatelessWidget {
                             Icon(Icons.icecream, color: Colors.white70), 
                             SizedBox(width: 8),
                             Icon(Icons.local_fire_department, color: Colors.white70),
-                             Expanded(
-                            flex:5,
-                            child: SizedBox()), 
-                            Icon(Icons.star, color: Colors.white, size: 20),
+                            //  Expanded(
+                            // flex:5,
+                            // child: SizedBox(),), 
+                            Padding(
+                              padding: EdgeInsets.only(left:85),
+                              child: Icon(Icons.star, color: Colors.white, size: 20),
+                            ),
                               SizedBox(width: 5),
                               Icon(Icons.star, color: Colors.white, size: 20),
                               SizedBox(width: 5),
                               Icon(Icons.star, color: Colors.white, size: 20),
                               SizedBox(width: 5),
                               Icon(Icons.grade,  size: 20),
-                               Expanded(
-                                flex: 2,
-                                child: SizedBox(width: 10),
-                                ),
-                               Text("4.0",style: TextStyle(
-                                        color: Colors.white70,
-                                        fontSize: 12,
-                                        ),
+                              //  Expanded(
+                              //   flex: 2,
+                              //   child: SizedBox(width: 10),
+                              //   ),
+                               Padding(
+                                 padding: EdgeInsets.only(left:16),
+                                 child: Text("4.0",style: TextStyle(
+                                          color: Colors.white70,
+                                          fontSize: 12,
                                ),
-                              ],
+                             ),
                             ),
-                          ),
+                          ],
+                         ),
+                       ),
                     ],
                   )
                 ],
@@ -153,7 +159,40 @@ class DetailsScreen extends StatelessWidget {
              ),
             ),
           )
-         ),
+         ),  
+          Padding(
+            padding: const EdgeInsets.fromLTRB(40,645,40,60),
+            child: Container(
+             decoration: BoxDecoration(
+              boxShadow: const [
+                BoxShadow(
+                  color: Color.fromARGB(255, 248, 150, 183),
+                   blurRadius: 2,
+                  offset: Offset(1, 2), // Shadow position
+                ),
+              ],
+              borderRadius: BorderRadius.circular(10),
+              gradient: const LinearGradient(colors: [
+                Color.fromARGB(255, 243, 111, 219),
+                Color.fromARGB(218, 209, 152, 130)
+              ], 
+                begin: Alignment.centerLeft, 
+                end: Alignment.centerRight
+               ),
+              ),
+                   child: const Padding(
+                   padding: EdgeInsets.symmetric(
+                   vertical: 10,        // höhe
+                   horizontal: 55       //button länge
+                  ),
+                  child: Text("Add to order for ₳8.99",
+                style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold)),
+                ),
+              ),
+          ),
         ]
       )
     );

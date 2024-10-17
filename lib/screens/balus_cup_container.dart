@@ -12,7 +12,7 @@ class BalusCupContainer extends StatelessWidget {
     return GestureDetector(
     onTap: () {
          showModalBottomSheet(context: context, builder:(context){
-          return DetailsScreen();
+          return const DetailsScreen();
           }
          );
           },
